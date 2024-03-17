@@ -10,3 +10,6 @@ vim.opt.incsearch = true
 vim.opt.number = true
 -- enable relative line numbers
 vim.opt.relativenumber = true
+
+-- disable wrapping
+vim.opt.wrap = false
