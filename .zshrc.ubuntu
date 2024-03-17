@@ -1,0 +1,67 @@
+# Path to your oh-my-zsh installation.
+export ZSH="/home/ignacio/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="agnoster"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git zsh-vi-mode)
+
+source $ZSH/oh-my-zsh.sh
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+#'##::::'##:'##:::'##:::::'######::'########:'##::::'##:'########:'########:
+# ###::'###:. ##:'##:::::'##... ##:... ##..:: ##:::: ##: ##.....:: ##.....::
+# ####'####::. ####:::::: ##:::..::::: ##:::: ##:::: ##: ##::::::: ##:::::::
+# ## ### ##:::. ##:::::::. ######::::: ##:::: ##:::: ##: ######::: ######:::
+# ##. #: ##:::: ##::::::::..... ##:::: ##:::: ##:::: ##: ##...:::: ##...::::
+# ##:.:: ##:::: ##:::::::'##::: ##:::: ##:::: ##:::: ##: ##::::::: ##:::::::
+# ##:::: ##:::: ##:::::::. ######::::: ##::::. #######:: ##::::::: ##:::::::
+#..:::::..:::::..:::::::::......::::::..::::::.......:::..::::::::..::::::::
+
+#add vi functionality to terminal
+set -o vi
+
+#prevent key repeat
+xset r off
+
+#aliases
+alias ffox="firefox >> /dev/null 2>&1&"
+alias chrome="google-chrome >> /dev/null 2>&1&"
+
+alias mednote="vim ~/Documents/Meditation_Notes/$(date +"%d-%m-%y")"
+alias bot="cd ~/repos/type-racer-bot"
+alias intercept="curl -i -X POST -H 'Content-Type: text/plain' -d \"if(contents && contents.getTextContents() && contents.getTextContents().indexOf('getTypingChallenge') !== -1){contents.setTextContents(contents.getTextContents().replace('/\\|\\d+guest:\\d+\\|/', '1611450458958guest:47849922777422'));}\" http://localhost:8080/proxy/8083/filter/request";
+
+# add ruby mine sh location
+path+=('/home/ignacio/RubyMine/RubyMine-2021.1.2/bin')
+# add webdriver
+#path+=('/home/ignacio/opt/WebDriver/bin')
+export PATH
+
+npm set prefix ~/.npm
+PATH="$HOME/.npm/bin:$PATH"
+PATH="./node_modules/.bin:$PATH"
+
+# Load rbenv automatically 
+eval "$(rbenv init -)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Start ssh agent
+eval "$(ssh-agent -s)"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+# Make neovim the default editor
+export EDITOR='nvim'
+export VISUAL='nvim'
+alias vim='nvim'
