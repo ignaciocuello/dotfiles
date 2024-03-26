@@ -48,13 +48,8 @@ path+=('/home/ignacio/RubyMine/RubyMine-2021.1.2/bin')
 #path+=('/home/ignacio/opt/WebDriver/bin')
 export PATH
 
-npm set prefix ~/.npm
 PATH="$HOME/.npm/bin:$PATH"
 PATH="./node_modules/.bin:$PATH"
-
-# Load rbenv automatically 
-eval "$(rbenv init -)"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Start ssh agent
 eval "$(ssh-agent -s)"
