@@ -99,3 +99,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Make neovim the default editor
+export EDITOR='nvim'
+export VISUAL='nvim'
+alias vim='nvim'
+alias vi='nvim'
+
+# Modern Vim book variables
+export VIMCONFIG=~/.config/nvim
+export VIMDATA=~/.local/share/nvim
