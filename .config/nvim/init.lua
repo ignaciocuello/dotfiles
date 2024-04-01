@@ -12,6 +12,7 @@ vim.call("minpac#init")
 local add = vim.fn['minpac#add']
 add('k-takata/minpac', {type = 'opt'})
 add('junegunn/fzf')
+add('catppuccin/nvim', {name = 'catppuccin'})
 
 -- Define user commands for updating/cleaning the plugins.
 -- Each of them calls PackInit() to load minpac and register
@@ -21,3 +22,7 @@ vim.cmd [[
   command! PackClean call minpac#clean()
   command! PackStatus call minpac#status()
 ]]
+
+
+-- Catpuccin theme
+vim.cmd.colorscheme "catppuccin"
