@@ -11,6 +11,7 @@ vim.call("minpac#init")
 
 local add = vim.fn['minpac#add']
 add('k-takata/minpac', {type = 'opt'})
+add('junegunn/fzf')
 
 -- Define user commands for updating/cleaning the plugins.
 -- Each of them calls PackInit() to load minpac and register
