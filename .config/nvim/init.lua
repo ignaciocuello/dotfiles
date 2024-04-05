@@ -13,6 +13,8 @@ local add = vim.fn['minpac#add']
 add('k-takata/minpac', {type = 'opt'})
 add('junegunn/fzf')
 add('catppuccin/nvim', {name = 'catppuccin'})
+add('vim-ruby/vim-ruby')
+add('tpope/vim-rails')
 
 -- Define user commands for updating/cleaning the plugins.
 -- Each of them calls PackInit() to load minpac and register
