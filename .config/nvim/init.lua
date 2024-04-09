@@ -189,6 +189,23 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+-- Disable wrapping
+vim.opt.wrap = false
+
+-- Explore
+vim.keymap.set("n", "<leader>-", vim.cmd.Ex, { desc = "Explore" })
+
+-- Test keymaps
+-- TODO: move to config: function()
+vim.keymap.set("n", "<leader>t", ":TestNearest<CR>", { desc = "Test nearest" })
+vim.keymap.set("n", "<leader>T", ":TestFile<CR>", { desc = "Test file" })
+vim.keymap.set("n", "<leader>a", ":TestSuite<CR>", { desc = "Test suite" })
+vim.keymap.set("n", "<leader>l", ":TestLast<CR>", { desc = "Test last" })
+vim.keymap.set("n", "<leader>g", ":TestVisit<CR>", { desc = "Test visit" })
+
+-- Adds line and relative line to netrw
+vim.g.netrw_bufsettings = "noma nomod nu rnu nobl nowrap ro"
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -807,14 +824,23 @@ require("lazy").setup({
 			--  Check out: https://github.com/echasnovski/mini.nvim
 		end,
 	},
-	{ -- Install github co-pilot
+	{
 		"github/copilot.vim",
 	},
-	{ -- Install vim-ruby
+	{
 		"vim-ruby/vim-ruby",
 	},
-	{ -- Install vim-rails
+	{
 		"tpope/vim-rails",
+	},
+	{
+		"vim-test/vim-test",
+		config = function()
+			vim.g["test#strategy"] = "neovim"
+		end,
+	},
+	{
+		"tpope/vim-unimpaired",
 	},
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
 	-- init.lua. If you want these files, they are in the repository, so you can just download them and
