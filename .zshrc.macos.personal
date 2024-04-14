@@ -106,6 +106,20 @@ export VISUAL='nvim'
 alias vim='nvim'
 alias vi='nvim'
 
+# Alias common access locations
+export PROJECTS='/Users/ignacio/Projects'
+export BOT='/Users/ignacio/Projects/botthaghosa'
+export NOTES='/Users/ignacio/Documents/Ignacio'
+export WORK='/Users/ignacio/Documents/Work'
+export CHEATSHEET='/Users/ignacio/Documents/Work/Cheatsheet.md'
+
 # Modern Vim book variables
 export VIMCONFIG=~/.config/nvim
 export VIMDATA=~/.local/share/nvim
+
+export PATH=$PATH:$VIMCONFIG/pack/minpac/start/fzf/bin
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+cd /Users/ignacio/Projects/botthaghosa
