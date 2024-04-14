@@ -40,8 +40,6 @@ vim.opt.updatetime = 250
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
 
--- TODO: READ FURTHER!!!
-
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -61,18 +59,10 @@ vim.opt.cursorline = true
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
--- Set highlight on search, but clear on pressing <Esc> in normal mode
+-- Set highlight on search
 vim.opt.hlsearch = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
 
--- Diagnostic keymaps
--- NOTE: No sure what these do
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Move cursor up half a page' })
@@ -91,13 +81,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Disable wrapping
 vim.opt.wrap = false
 
--- Test keymaps
--- TODO: move to config: function()
-vim.keymap.set('n', '<leader>t', ':TestNearest<CR>', { desc = 'Test nearest' })
-vim.keymap.set('n', '<leader>T', ':TestFile<CR>', { desc = 'Test file' })
-vim.keymap.set('n', '<leader>a', ':TestSuite<CR>', { desc = 'Test suite' })
-vim.keymap.set('n', '<leader>l', ':TestLast<CR>', { desc = 'Test last' })
-vim.keymap.set('n', '<leader>g', ':TestVisit<CR>', { desc = 'Test visit' })
+-- TODO: READ FURTHER!!!
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -736,6 +720,12 @@ require('lazy').setup({
     'vim-test/vim-test',
     config = function()
       vim.g['test#strategy'] = 'neovim'
+
+      vim.keymap.set('n', '<leader>t', ':TestNearest<CR>', { desc = 'Test nearest' })
+      vim.keymap.set('n', '<leader>T', ':TestFile<CR>', { desc = 'Test file' })
+      vim.keymap.set('n', '<leader>a', ':TestSuite<CR>', { desc = 'Test suite' })
+      vim.keymap.set('n', '<leader>l', ':TestLast<CR>', { desc = 'Test last' })
+      vim.keymap.set('n', '<leader>g', ':TestVisit<CR>', { desc = 'Test visit' })
     end,
   },
   {
