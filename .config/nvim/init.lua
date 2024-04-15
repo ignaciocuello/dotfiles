@@ -56,6 +56,9 @@ vim.opt.inccommand = "split"
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
+-- Highlight column at 81st and 121st position
+vim.opt.colorcolumn = "81,121"
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
