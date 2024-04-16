@@ -94,6 +94,7 @@ vim.opt.wrap = false
 --  See `:help lua-guide-autocommands`
 
 -- Highlight when yanking (copying) text
+-- Group important for not doubling up on re-source (clear = true)
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
