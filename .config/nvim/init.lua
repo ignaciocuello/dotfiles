@@ -728,6 +728,7 @@ require("lazy").setup({
 		"vim-test/vim-test",
 		config = function()
 			vim.g["test#strategy"] = "neovim"
+			vim.g["test#neovim#start_normal"] = 1
 
 			vim.keymap.set("n", "<leader>t", ":TestNearest<CR>", { desc = "Test nearest" })
 			vim.keymap.set("n", "<leader>T", ":TestFile<CR>", { desc = "Test file" })
