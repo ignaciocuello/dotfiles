@@ -38,7 +38,9 @@ vim.opt.updatetime = 250
 
 -- Decrease mapped sequence wait time
 -- Displays which-key popup sooner
-vim.opt.timeoutlen = 300
+-- NOTE: this needs to be above 300 or 'Comment.nvim' does not work
+-- See https://github.com/numToStr/Comment.nvim/issues/115#issuecomment-1032290098
+vim.opt.timeoutlen = 500
 
 -- Configure how new splits should be opened
 vim.opt.splitright = true
@@ -198,7 +200,7 @@ local function add_ruby_deps_command(client, bufnr)
 	})
 end
 
-require("lspconfig").ruby_ls.setup({
+require("lspconfig").ruby_lsp.setup({
 	on_attach = function(client, buffer)
 		setup_diagnostics(client, buffer)
 		add_ruby_deps_command(client, buffer)

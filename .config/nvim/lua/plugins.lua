@@ -3,7 +3,7 @@ return {
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
 	-- "gc" to comment visual regions/lines
-	"numToStr/Comment.nvim",
+	{ "numToStr/Comment.nvim", opts = {} },
 	-- TODO: read further
 
 	-- Here is a more advanced example where we pass configuration
@@ -320,7 +320,7 @@ return {
 				-- But for many setups, the LSP (`tsserver`) will work just fine
 				-- tsserver = {},
 				--
-				ruby_ls = {},
+				ruby_lsp = {},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
