@@ -129,6 +129,10 @@ return {
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
+      -- TODO: no need for this once we move dotfiles to stow, reason being the gitignore * is hiding everything.
+      vim.keymap.set('n', '<leader>sF', function()
+        builtin.find_files { no_ignore = true, no_ignore_parent = true }
+      end, { desc = '[S]earch All [F]iles' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
       vim.keymap.set('n', '<leader>st', builtin.builtin, { desc = '[S]earch [T]elescope' })
       vim.keymap.set('n', '<leader>ss', builtin.git_status, { desc = '[S]earch [S]tatus' })
