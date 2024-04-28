@@ -577,9 +577,6 @@ return {
     end,
   },
   {
-    'github/copilot.vim',
-  },
-  {
     'vim-ruby/vim-ruby',
   },
   {
