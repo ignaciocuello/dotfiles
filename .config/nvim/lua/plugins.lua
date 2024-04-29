@@ -22,8 +22,8 @@ return {
 					gitsigns.blame_line({ full = true })
 				end, { desc = "[G]it [B]lame" })
 				vim.keymap.set("n", "<leader>gD", function()
-					gitsigns.diffthis("main")
-				end, { desc = "[G]it [D]iff (main)" })
+					gitsigns.diffthis("master")
+				end, { desc = "[G]it [D]iff (master)" })
 			end,
 		},
 	},
