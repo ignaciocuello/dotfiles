@@ -13,3 +13,6 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 alias vim='nvim'
 alias vi='nvim'
+
+# Dotfiles config setup
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
