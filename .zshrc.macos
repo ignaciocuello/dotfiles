@@ -14,5 +14,12 @@ export VISUAL='nvim'
 alias vim='nvim'
 alias vi='nvim'
 
+# Alias common access locations
+export PROJECTS="$HOME/Projects"
+
+export WORK="$HOME/Documents/Work"
+export DAILY="$WORK/Daily/"
+export CHEATSHEET="$WORK/Cheatsheet.md"
+
 # Dotfiles config setup
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

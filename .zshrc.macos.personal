@@ -1,13 +1,10 @@
 source ~/.zshrc.macos
 
 # Alias common access locations
-export PROJECTS='/Users/ignacio/Projects'
-export BOT='/Users/ignacio/Projects/botthaghosa'
+export BOT="$PROJECTS/botthaghosa"
 
-export NOTES='/Users/ignacio/Documents/'
-export IGNACIO='/Users/ignacio/Documents/Ignacio'
-export WORK='/Users/ignacio/Documents/Work'
-export CHEATSHEET='/Users/ignacio/Documents/Work/Cheatsheet.md'
+export NOTES="$HOME/Documents/"
+export IGNACIO="$NOTES/Ignacio"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
