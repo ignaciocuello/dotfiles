@@ -4,3 +4,14 @@ source ~/.zshrc.macos
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # Tests don't run well with spring
 export DISABLE_SPRING=true
+
+
+# Alias common access locations
+export PROJECTS='/Users/ignaciocuello/Projects/app/'
+
+export WORK='/Users/ignaciocuello/Documents/Work'
+export DAILY="/Users/ignaciocuello/Documents/Work/Daily/"
+export CHEATSHEET='/Users/ignaciocuello/Documents/Work/Cheatsheet.md'
+
+# Start in projects directory
+cd ~/Projects/app/
