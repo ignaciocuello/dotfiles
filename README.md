@@ -9,6 +9,8 @@ config config --local status.showUntrackedFiles no
 config config push.autoSetupRemote true
 ### If copying to your personal mac
 cp ~/.zshrc.macos.personal ~/.zshrc
+
+brew bundle --no-lock
 ```
 
 Remove any existing files if `config checkout` fails, then try again.
