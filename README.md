@@ -15,6 +15,9 @@ brew bundle --no-lock
 # Install nerd fonts
 brew search '/font-.*-nerd-font/' | awk '{ print $1 }' | xargs -I{} brew install --cask {} || true
 
+# Install vim key bindings for the terminal
+git clone https://github.com/jeffreytse/zsh-vi-mode $ZSH_CUSTOM/plugins/zsh-vi-mode
+
 # Set your git user
 git config --global user.email "your@email.com"
 git config --global user.name "Ignacio Cuello"
