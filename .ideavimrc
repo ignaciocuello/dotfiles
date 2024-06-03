@@ -1,7 +1,1 @@
-set hls is
-set number
-" relative up and down line numbers
-set relativenumber
-set nowrap
-
-set clipboard=unnamedplus
+source ~/.vimrc
