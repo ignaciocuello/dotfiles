@@ -1,1 +1,11 @@
+let mapleader=" "
+
 source ~/.vimrc
+
+map <leader>d <Action>(Debug)
+" NOTE: idk how helpful this one is... we'll see
+map <leader>D <Action>(ActivateDebugToolWindow)
+map <leader>c <Action>(Stop)
+map <leader>b <Action>(ToggleLineBreakpoint)
+
+map :A <Action>(GotoTest)
