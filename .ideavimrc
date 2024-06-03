@@ -8,4 +8,4 @@ map <leader>D <Action>(ActivateDebugToolWindow)
 map <leader>c <Action>(Stop)
 map <leader>b <Action>(ToggleLineBreakpoint)
 
-map :A <Action>(GotoTest)
+map <leader>gd <Action>(GotoDeclaration)
