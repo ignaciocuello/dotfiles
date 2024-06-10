@@ -95,6 +95,18 @@ vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w><C-k>", { desc = "Move focus to th
 vim.keymap.set("n", "<leader>vt", ":vsplit | terminal<CR>", { desc = "[V]ertical split for [T]erminal" })
 vim.keymap.set("n", "<leader>xt", ":split | terminal<CR>", { desc = "[X]orizontal split for [T]erminal" })
 
+-- Keybind to interface with RubyMine, for debugging and LSP
+vim.keymap.set("n", "<leader>ij", ":lua RubyMine()<CR>", { desc = "Open RubyMine on the current file ([I]ntelli[J])" })
+
+function RubyMine()
+	os.execute(
+		"/Applications/RubyMine.app/Contents/MacOS/rubymine /Users/ignaciocuello/Projects/app --line "
+			.. vim.api.nvim_win_get_cursor(0)[1]
+			.. " "
+			.. vim.fn.expand("%:p")
+	)
+end
+
 -- Disable wrapping
 vim.opt.wrap = false
 
