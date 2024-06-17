@@ -590,6 +590,34 @@ return {
 			vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 		end,
 	},
+	{ -- Linting
+		"mfussenegger/nvim-lint",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			local lint = require("lint")
+			lint.linters_by_ft = {
+				markdown = { "markdownlint" },
+				eruby = { "erb_lint" },
+			}
+
+			local erb_lint = lint.linters.erb_lint
+			erb_lint.args = {
+				"exec",
+				"erblint",
+				"--format",
+				"compact",
+				"--autocorrect",
+			}
+
+			local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
+			vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+				group = lint_augroup,
+				callback = function()
+					require("lint").try_lint()
+				end,
+			})
+		end,
+	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
@@ -606,7 +634,6 @@ return {
 	--
 	-- require 'kickstart.plugins.debug',
 	-- require 'kickstart.plugins.indent_line',
-	-- require 'kickstart.plugins.lint',
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--    This is the easiest way to modularize your config.
