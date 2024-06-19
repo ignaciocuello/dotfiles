@@ -2,6 +2,8 @@ let mapleader=" "
 
 source ~/.vimrc
 
+Plug 'tpope/vim-surround'
+
 map <leader>d <Action>(Debug)
 " NOTE: idk how helpful this one is... we'll see
 map <leader>D <Action>(ActivateDebugToolWindow)
