@@ -22,9 +22,9 @@ export DAILY="$WORK/Daily/"
 export CHEATSHEET="$WORK/Cheatsheet.md"
 export IMPROVEMENTS="$WORK/Improvements.md"
 
-export D_="$WORK/Daily/"
-export C_="$WORK/Cheatsheet.md"
-export I_="$WORK/Improvements.md"
+export D="$WORK/Daily/"
+export C="$WORK/Cheatsheet.md"
+export I="$WORK/Improvements.md"
 
 # Dotfiles config setup
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
