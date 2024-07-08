@@ -2,12 +2,27 @@ let mapleader=" "
 
 source ~/.vimrc
 
-Plug 'tpope/vim-surround'
+""" Plugins  --------------------------------
+set surround
+set commentary
 
-map <leader>d <Action>(Debug)
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+map <leader>dd <Action>(Debug)
+map <leader>si <Action>(ShowIntentionActions)
+
+map <leader>sg <Action>(FindInPath)
+map <leader>sf <Action>(GotoFile)
+"
 " NOTE: idk how helpful this one is... we'll see
 map <leader>D <Action>(ActivateDebugToolWindow)
+
 map <leader>c <Action>(Stop)
 map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>wr <Action>(ChangeSplitOrientation)
 
 map <leader>gd <Action>(GotoDeclaration)
