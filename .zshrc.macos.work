@@ -12,3 +12,5 @@ export APP="$PROJECTS/app"
 cd $APP
 
 alias shipit='git checkout master && git pull --rebase && git checkout release && git pull --rebase && git merge master && git push'
+alias rubo='rails rubocop'
+alias suite='rails default'
