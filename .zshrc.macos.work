@@ -7,6 +7,7 @@ export DISABLE_SPRING=true
 
 # Alias common access locations
 export APP="$PROJECTS/app"
+export LLM="$PROJECTS/app_llm"
 
 # Start on our app
 cd $APP

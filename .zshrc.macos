@@ -25,6 +25,7 @@ export IMPROVEMENTS="$WORK/Improvements.md"
 export D="$WORK/Daily/"
 export C="$WORK/Cheatsheet.md"
 export I="$WORK/Improvements.md"
+export P="$WORK/Prompting.md"
 
 # Dotfiles config setup
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
