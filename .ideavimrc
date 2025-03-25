@@ -12,11 +12,15 @@ set ideastatusicon=gray
 set idearefactormode=keep
 
 """ Mappings --------------------------------
-map <leader>dd <Action>(Debug)
+""" https://youtrack.jetbrains.com/issue/VIM-3404/DebugClass-action-no-longer-works-in-2024.1
+map <leader>r <Action>(RunClass)
 map <leader>c <Action>(Stop)
 
 map <leader>sg <Action>(FindInPath)
 map <leader>sf <Action>(GotoFile)
+
+map <leader>t /test<cr>
+map <leader>T ?test<cr>
 
 map <leader>b <Action>(ToggleLineBreakpoint)
 " NOTE: kinda useful, but seldom used
