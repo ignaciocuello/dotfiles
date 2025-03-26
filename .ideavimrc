@@ -13,6 +13,9 @@ set idearefactormode=keep
 
 """ Mappings --------------------------------
 """ https://youtrack.jetbrains.com/issue/VIM-3404/DebugClass-action-no-longer-works-in-2024.1
+map J gT
+map K gt
+
 map <leader>r <Action>(RunClass)
 map <leader>c <Action>(Stop)
 
