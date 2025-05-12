@@ -1,3 +1,10 @@
+""" Mappings --------------------------------
+let mapleader=" "
+
+map <leader>J :normal! J<CR>
+map J gT
+map K gt
+
 set nocompatible
 filetype off
 
