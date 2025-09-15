@@ -9,14 +9,24 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
-""" https://youtrack.jetbrains.com/issue/VIM-3404/DebugClass-action-no-longer-works-in-2024.1
 map <leader>r <Action>(RunClass)
+map <leader>d <Action>(DebugClass)
+map <leader>g <Action>(Debug)
 map <leader>c <Action>(Stop)
+map <leader>q <Action>(QuickEvaluateExpression)
+map <leader>b <Action>(ToggleLineBreakpoint)
 
+map <leader>sc <Action>(Vcs.Show.Local.Changes)
 map <leader>sg <Action>(FindInPath)
 map <leader>sf <Action>(GotoFile)
 map <leader>sr <Action>(GotoRelated)
 
-map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>pp <Action>(Diff.PrevChange)
+map <leader>pn <Action>(Diff.NextChange)
+map <leader>pv <Action>(Github.PullRequest.Changes.MarkViewed)
+map <leader>ps <Action>(EditSource)
+
+map <leader>rp <Action>(CopyContentRootPath)
+
 " NOTE: kinda useful, but seldom used
 map <leader>wr <Action>(ChangeSplitOrientation)
